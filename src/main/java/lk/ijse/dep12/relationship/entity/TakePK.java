@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Embeddable
 public class TakePK implements Serializable {
     private Batch batch;
     private Student student;

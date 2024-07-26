@@ -10,9 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "take")
+@IdClass(TakePK.class)
 public class Take {
-    @EmbeddedId
-    private TakePK takePK;
     @Id
     @ManyToOne
     @JoinColumn(name = "batch_id")

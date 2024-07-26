@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Embeddable
 public class CourseDetailsPK implements Serializable {
     private Course course;
     private Module module;

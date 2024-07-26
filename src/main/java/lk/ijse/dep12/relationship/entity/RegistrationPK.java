@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Embeddable
 public class RegistrationPK implements Serializable {
     private Student student;
     private User user;

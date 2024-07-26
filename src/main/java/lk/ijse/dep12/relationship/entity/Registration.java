@@ -12,9 +12,8 @@ import java.sql.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "registration")
+@IdClass(RegistrationPK.class)
 public class Registration {
-    @EmbeddedId
-    private RegistrationPK registrationPK;
     @Id
     @ManyToOne
     @JoinColumn(name = "student_nic")
@@ -27,6 +26,5 @@ public class Registration {
     @ManyToOne
     @JoinColumn(name = "batch_id")
     private Batch batch;
-    @Column(name = "date")
     private Date date;
 }

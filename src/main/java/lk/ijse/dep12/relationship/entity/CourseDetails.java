@@ -10,9 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "course_details")
+@IdClass(CourseDetailsPK.class)
 public class CourseDetails {
-    @EmbeddedId
-    private CourseDetailsPK courseDetailsPK;
     @Id
     @ManyToOne
     @JoinColumn(name = "course_code")

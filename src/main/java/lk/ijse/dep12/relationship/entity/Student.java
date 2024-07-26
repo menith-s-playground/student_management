@@ -1,11 +1,12 @@
 package lk.ijse.dep12.relationship.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -17,4 +18,12 @@ public class Student {
     private String nic;
     private String name;
     private String address;
+//    @OneToMany(mappedBy = "student", cascade = CascadeType.PERSIST)
+//    private List<StudentContact> studentContactLists = new ArrayList<>();
+//
+//    public Student(String nic, String name, String address) {
+//        this.nic = nic;
+//        this.name = name;
+//        this.address = address;
+//    }
 }

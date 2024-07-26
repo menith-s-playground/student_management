@@ -1,8 +1,6 @@
 package lk.ijse.dep12.relationship.entity;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,11 +8,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 @Table(name = "student_contact")
 public class StudentContact {
-    private Student student;
     @ManyToOne
-    @JoinColumn(name = "student_id")
+    @JoinColumn(name = "student_nic")
+    private Student student;
+
+    @Id
     private String contact;
 
 }
